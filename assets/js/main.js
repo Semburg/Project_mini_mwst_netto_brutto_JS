@@ -2,6 +2,7 @@ let findBrutto = document.getElementById("netToBrutto");
 let findNetto = document.getElementById("bruToNetto");
 
 function testCheck() {
+    document.getElementById("errorText").innerHTML = ""
     if (findBrutto.checked) {
         document.getElementById("betragInDescription").innerHTML = "Nettobetrag(Preis ohne Mehrwertsteuer) in €"
         document.getElementById("solutionDes").innerHTML = "Bruttobetrag(Endpreis)"
@@ -19,6 +20,7 @@ let percent19 = document.getElementById("nineteen");
 let percent7 = document.getElementById("seven");
 
 function percentageChoose(){
+    document.getElementById("errorText").innerHTML = ""
     if (percent19.checked) {
         taxPercentage = 19;
     } else {
