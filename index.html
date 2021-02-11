@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <p>Was soll abgerechnet werden?</p>
+        <form action="">
+            <input type="radio" id="netToBrutto" name="direction" onchange="testCheck()">
+            <label for="direction">Mehrwetsteuer aufschlagen (Netto zu Brutto)</label>
+            <br>
+            <input type="radio" id="bruToNetto" name="direction" onchange="testCheck()">
+            <label for="direction">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            <br>
+        </form>
+
+        <form action="">
+            <p>Mehrwehrtsteuersatz</p>
+            <input type="radio" name="percent" id="nineteen" onchange="percentageChoose()"> <span>19%</span>
+            <input type="radio" name="percent" id="seven" onchange="percentageChoose()"> <span>7%</span>
+        </form>
+
+        <p id="betragCall"></p>
+
+        <form action="">
+            <label for="betragIn" id="betragInDescription"></label>
+            <br>
+            <input type="number" id="betragIn" required>
+            <br>
+            <p id="errorText" style="color: red;"></p>
+            <input type="button" value="Berechnen" onclick="showOn()">
+        </form>
+
+        <h5>Ergebnis</h5>
+
+        <p id="taxDes">Mehrwertsteuerbetrag</p>
+        <h4 id="taxAmount"></h4>
+        <br>
+
+        <p id="solutionDes"> <span id=""></span></p>
+        <h4 id="solutionAmount"></h4>
+
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
